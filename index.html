@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="AugGen Paper">
+  <meta property="og:title" content="Auggen"/>
+  <meta property="og:description" content="Synthetic Augmentation Can Improve Discriminative Models"/>
+  <meta property="og:url" content=""/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Auggen">
+  <meta name="twitter:description" content="Synthetic Augmentation Can Improve Discriminative Models">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Synthetic Data, Discriminative Task, Generators as Augmentator, Generative Augmentation, Face Recognition, Generative Models, Machine Learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>AugGen</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">AugGen: </h1>
+            <h2 class="title is-2 publication-title">Synthetic Augmentation Can Improve Discriminative Models</h2>
+
+            <div class="column has-text-centered">
+              <h4 class="title is-4 publication-title"> arxiv 2025 </h4>
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://parsa-ra.github.io">Parsa Rahimi</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.damienteney.info/">Damien Teney</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.idiap.ch/~marcel/professional/Welcome.html">Sébastien Marcel</a><sup>2,3</sup>
+              </span>
+              </span>
+            </div>
+
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>EPFL,</span>
+              <span class="author-block"><sup>2</sup>Idiap,</span>
+              <span class="author-block"><sup>2</sup>UNIL</span>
+            </div>
+
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2502"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://parsa-ra.github.io/auggen"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-gitlab"></i>
+                    </span>
+                    <span>Code (Soon)</span>
+                    </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://auggen.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset (Soon)</span>
+                  </a>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+  
+        <img src="./static/images/teaser.drawio.png">
+        </img>
+  
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">AugGen</span> We show that by informed sampling of an generator we can generate hard samples for training a discirminator which leads to its better general performance. This is all while we are using only one source of real data. 
+        </h2>
+  
+  
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            The increasing dependence on large-scale datasets in machine learning introduces significant privacy and ethical challenges. 
+            Synthetic data generation offers a promising solution; however, most current methods rely on external datasets or pre-trained models, which add complexity and escalate resource demands. In this work, we introduce a novel self-contained synthetic augmentation technique that strategically samples from a conditional generative model trained exclusively on the target dataset. 
+            This approach eliminates the need for auxiliary data sources. Applied to face recognition datasets, our method achieves <b>1–12%</b> performance improvements on the IJB-C and IJB-B benchmarks. It outperforms models trained solely on real data and exceeds the performance of state-of-the-art synthetic data generation baselines. Notably, these enhancements often surpass those achieved through architectural improvements, underscoring the significant impact of synthetic augmentation in data-scarce environments. These findings demonstrate that carefully integrated synthetic data not only addresses privacy and resource constraints but also substantially boosts model performance.
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  
+  
+    </div>
+  </section>
+  
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+
+        
+        <div style="max-width: 800px; width: 100%; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+          <h2 class="title is-3">Key findings</h2>
+
+          Our main contribution is to validate the following hypothesis.
+          <!-- H1 Box -->
+          <div style="background-color: #fff8dc; border-left: 5px solid #ffcc00; padding: 15px; margin-bottom: 20px; font-weight: bold; font-size: 1.1em; text-align: left; border-radius: 10px;">
+              <strong>H1:</strong> A generative model can boost the performance of a downstream discriminative model 
+              with an appropriate informed sampling, and augmenting the resulting data with the original data that was used for training the generative and discriminative models.
+          </div>
+  
+          <!-- Choose either UL (bullet points) or OL (enumerated) -->
+          More preceisely, we show that:
+
+          <!-- Bullet Points -->
+          <!-- <ul style="padding-left: 20px;">
+              <li>We propose a simple yet effective sampling technique that strategically conditions a generative model to produce beneficial samples, enhancing the discriminator’s training process.</li>
+              <li>We show that mixing our AugGen data with real samples 
+                  <span style="font-weight: bold; color: #d9534f;">often surpasses even architectural-level improvements</span>, 
+                  underscoring that <span style="font-weight: bold; color: #d9534f;">synthetic dataset generation can be as impactful as architectural advances</span>.
+              </li>
+              <li>We demonstrate that AugGen training can be as effective as adding up to 
+                  <span style="font-weight: bold; color: #d9534f;">1.7×</span> real samples, 
+                  <span style="font-weight: bold; color: #d9534f;">reducing</span> the need for more face images while preserving performance.
+              </li>
+              <li>We show that current generative metrics (e.g., FD, KD) are poorly correlated with downstream discriminative performance, emphasizing the need for improved proxy metrics.</li>
+          </ul> -->
+
+          <!-- Enumerated List -->
+          
+          <ol style="padding-left: 20px;">
+              <li>We propose a simple yet effective sampling technique that strategically conditions a generative model to produce beneficial samples, enhancing the discriminator’s training process.</li>
+              <li>We show that mixing our AugGen data with real samples 
+                  <span style="font-weight: bold; color: #d9534f;">often surpasses even architectural-level improvements</span>, 
+                  underscoring that <span style="font-weight: bold; color: #d9534f;">synthetic dataset generation can be as impactful as architectural advances</span>.
+              </li>
+              <li>We demonstrate that AugGen training can be as effective as adding up to 
+                  <span style="font-weight: bold; color: #d9534f;">1.7×</span> real samples, 
+                  <span style="font-weight: bold; color: #d9534f;">reducing</span> the need for more face images while preserving performance.
+              </li>
+              <li>We show that current generative metrics (e.g., FD, KD) are poorly correlated with downstream discriminative performance, emphasizing the need for improved proxy metrics.</li>
+          </ol>
+          
+  
+      </div>
+
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+  <section class="hero is-small is-light">
+    <div class="container is-max-desktop ">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Motivation</h2>
+          <img src="./static/images/overview.drawio.png">
+          </img>
+          <div class="content has-text-justified">
+            Currently the most common way that people are using synthetic dataset, is by relaying on the pre-trained models like StableDiffuion and Flux or model trained on large scale datasets like  WebFace and further post processing using off-the-shelf methods to generate their synthetic data, we diverge from this trend and solely rely on 
+          single source of real data to train a discriminator and generator. To prevent information leakage. 
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+          
+
+ <section class="section is-small is-light">
+    <div class="container is-max-desktop ">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method: Generating Synthetic Mixes</h2>
+          <img src="./static/images/overview_method.drawio.png">
+          </img>
+          <div class="content has-text-justified">
+            <ul>
+                <li>We start with a dataset of face images containing multiple identities (classes), each of which includes multiple images.</li>
+                
+                <li>We train a discriminator and a class-conditional generator on top of this dataset.</li>
+                
+                <li>Using the discriminator, we aim to find the optimal conditions for the generator to maximize both the inter-class separation of source classes and intra-class similarity.</li>
+                
+                <li>By randomly sampling different identities, we apply the optimal conditions to generate new synthetic identities that retain cues from the original classes while remaining distinct.</li>
+                
+                <li>By combining the generated hard samples with the original dataset, we demonstrate an improvement in the discriminator's performance.</li>
+            </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Image carousel -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="carcon">
+          <!-- Your image here -->
+          <img src="static/images/edm2spixspace_31K_hp3_mixed_test_115-2668.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/edm2spixspace_31K_hp3_mixed_test_2299-8574.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/edm2spixspace_31K_hp3_mixed_test_760-1297.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/edm2spixspace_31K_hp3_mixed_test_7858-8434.png" alt="MY ALT TEXT"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/edm2spixspace_31K_hp3_mixed_test_8155-6701.png" alt="MY ALT TEXT"/>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        In each sample, the first and last column corresponds to identity in the original dataset. The second and forth column are reconstruction of the identities by the generator trained in the class-conditional way.
+        The middle column is the newly generated identity that mixes the attributes of its original classes while being distinct.
+
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+
+
+
+<section class="hero is-small is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Dataset</h2>
+      <p>
+        We will release the synthetic dataset soon.
+      </p>
+      <p>
+        The dataset will be released in three formats, MX `rec` files, image folder tarified (i.e., for usage with ImageTar dataloader) or uncompressed image folder hierarchy.  
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Paper</h2>
+
+      <iframe  src="static/auggen.pdf" width="100%" height="400">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{rahimi2024synthetic,
+      title={Synthetic to Authentic: Transferring Realism to 3D Face Renderings for Boosting Face Recognition},
+      author={Rahimi, Parsa and Razeghi, Behrooz and Marcel, Sebastien},
+      journal={arXiv preprint arXiv:2407.07627},
+      year={2024}
+    }
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com/parsa-ra" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            As usual,
+            this page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page. ;)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
