@@ -132,7 +132,7 @@
         </img>
   
         <h2 class="subtitle has-text-centered">
-          <span class="dnerf">AugGen</span> We show that by informed sampling of an generator we can generate hard samples for training a discirminator which leads to its better general performance. This is all while we are using only one source of real data. 
+          <span class="dnerf">AugGen</span> demonstrates that informed sampling of a generator can produce challenging samples for training a discriminator, leading to improved overall performance. This is achieved using only a single source of real data.
         </h2>
   
   
@@ -228,8 +228,7 @@
           <img src="./static/images/overview.drawio.png">
           </img>
           <div class="content has-text-justified">
-            Currently the most common way that people are using synthetic dataset, is by relaying on the pre-trained models like StableDiffuion and Flux or model trained on large scale datasets like  WebFace and further post processing using off-the-shelf methods to generate their synthetic data, we diverge from this trend and solely rely on 
-          single source of real data to train a discriminator and generator. To prevent information leakage. 
+            Currently, the most common approach to using synthetic datasets is relying on pre-trained models like StableDiffusion and Flux or models trained on large-scale datasets like WebFace. This approach then utilizes further post-processing with off-the-shelf methods to generate synthetic data. We diverge from this trend by solely relying on a single source of real data to train both a discriminator and a generator. This prevents information leakage.
          </div>
         </div>
       </div>
@@ -287,8 +286,8 @@
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        In each sample, the first and last column corresponds to identity in the original dataset. The second and forth column are reconstruction of the identities by the generator trained in the class-conditional way.
-        The middle column is the newly generated identity that mixes the attributes of its original classes while being distinct.
+        In each sample, the first and last columns correspond to identities in the original dataset. 
+        The second and fourth columns are reconstructions of the identities by the generator trained in a class-conditional way.
 
       </h2>
     </div>
