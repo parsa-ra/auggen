@@ -102,7 +102,7 @@
                   <a href="https://parsa-ra.github.io/auggen"
                      class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
-                        <i class="fab fa-gitlab"></i>
+                        <i class="fab fa-github"></i>
                     </span>
                     <span>Code (Soon)</span>
                     </a>
@@ -115,6 +115,19 @@
                     </span>
                     <span>Dataset (Soon)</span>
                   </a>
+                </span>
+                <span class="link-block">
+                  <button type="button"
+                          class="external-link button is-normal is-rounded is-dark"
+                          data-target="bibtex-entry"
+                          aria-label="Copy BibTeX citation"
+                          id="copy-bibtex-top">
+                    <span class="icon">
+                        <i class="fas fa-clipboard"></i>
+                    </span>
+                    <span>Copy BibTeX</span>
+                  </button>
+                </span>
               </div>
   
             </div>
@@ -359,14 +372,27 @@
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{rahimi2025synthetic,
-      title={AugGen: Synthetic Augmentation Can Improve Discriminative Models},
-      author={Rahimi, Parsa and Teney, Damien and Marcel, Sebastien},
-      journal={arXiv preprint arXiv:2503.11544},
-      year={2025}
-    }
-</code></pre>
+    <div class="is-flex is-align-items-center is-justify-content-space-between">
+      <h2 class="title mb-0">BibTeX</h2>
+      <button type="button"
+              class="button is-small is-link"
+              data-target="bibtex-entry"
+              aria-label="Copy BibTeX citation"
+              id="copy-bibtex-bottom">
+        <span class="icon is-small">
+          <i class="fas fa-clipboard"></i>
+        </span>
+        <span>Copy BibTeX</span>
+      </button>
+    </div>
+    <pre><code id="bibtex-entry">@inproceedings{
+rahimi2025auggen,
+title={AugGen: Synthetic Augmentation using Diffusion Models Can Improve Recognition},
+author={Parsa Rahimi and Damien Teney and S{\'e}bastien Marcel},
+booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
+year={2025},
+url={https://openreview.net/forum?id=LuKlBH8DAT}
+}</code></pre>
   </div>
 </section>
 

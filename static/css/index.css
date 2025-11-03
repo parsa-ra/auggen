@@ -13,6 +13,11 @@ body {
     margin-bottom: 5px;
 }
 
+.link-block .button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .dnerf {
   font-variant: small-caps;
 }
@@ -160,6 +165,5 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
 
 
